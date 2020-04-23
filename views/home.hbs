@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/all.min.css">
+   
+   
+</head>
+<body>
+    <header>
+            <ul>
+                <li> <a href="/public/vue/home.html">Galerie</a></li>
+                <li> <a href="/public/vue/Galerie.html"> Réservations</a></li>
+                <li> <a href="/public/vue/incris.html"> Inscris-toi</a> </li>
+            </ul>
+        </div>
+        <div class="nav2">
+            <div class="menu">
+                <img onclick="menu()" src="image/menu.jpg">
+            </div>
+            <div class="container" id="container">
+                <div class="box2"> <a href="home.html">Galerie</a> </div>
+                <div class="box2"> <a href="Galerie.html"> Réservations</a> </div>
+                <div class="box2"> <a href="incris.html"> Inscris-toi</a>  </div>
+            </div>
+       </div> 
+       <script>
+           function menu()
+           {
+            var x=document.getElementById("container");
+            if(x.style.display==="none")
+            x.style.display="inline";
+            else
+            x.style.display="none";
+        }
+       </script> 
+
+        
+            <h2>
+                Maisons, villas, appartements <br>à louer partout dans le Maroc
+            </h2>
+        </div>
+   
+        <div class="offres"> 
+           <button><i class="fas fa-chevron-left"></i></button>
+           <img class="img1" src="/image/of1.jpg" alt="">
+             <img  class="img2" src="/image/of2.jpg" alt="">
+             <img  class ="img3" src="/image/of3.jpg" alt="">
+            <button><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="text1">
+            <h5>Découvrez nos</h5><br>
+            <h3> Destinations au Maroc</h3> <br>
+            <p> nous offrons la possibilité de réaliser vos réservations en ligne en toute sécurité <br>
+                répartis dans  des meilleures destinations au Maroc avec les meilleurs prix garantis.</p>
+                <br> <br>
+            <p>Présents sur Marrakech, Tanger, Casablanca, , Fes, Agadir, Essaouira, Ouarzazate , Zagora et Saidia, <br> 
+                nous offront une multitude d’offres voyages pour réussir votre séjour au Maroc</p>
+        </div>
+
+    <div class="main-reserve">
+  {{#each Producto}}
+        <div class="clonne1" >
+        <div class="zoom">
+        <div > <img src="{{this.source}}"> <a href="https://fr.luxuryretreats.com/s/Marrakech--Morocco/homes?refinement_paths%5B%5D=%2Fhomes&query=Marrakech%2C%20Morocco&adults=0&children=0&infants=0&place_id=ChIJ8WzWQ6ncrw0Rs296i-i8NwE&search_type=unknown"></a> </div>
+        <h4>{{this.id}}</h4>
+        {{!-- <p>300 locations disponibles</p> --}}
+       </div>
+     </div>
+  {{/each}}
+       
+        {{!-- {{#each Producto}}
+         <div class="solo-column">
+            <div class="title-reserve"><h2>{{this.id}}</h2></div>
+            <div class="solo-image"><img src="{{this.source}}"alt="1st product"></div>
+            <div class="cont-btn">
+                <div class="btna" onclick="method2()"><a href="#method2">reserve</a></div>
+                <div class="btna"><a href="https://www.youtube.com/watch?v=f4LYGil7kOo">see video</a></div>
+            </div>
+        </div>
+        {{/each}} --}}
+
+    <div class="space"></div> 
+    
+    <form class="box" method="POST" action="ADDproduct">
+        <div><input type="text" name="addname" placeholder="id_name" id="addname" ></div> 
+        <div><input type="text" name="addsource" placeholder="link image"   id="addsource"></div> 
+        <input type="submit" name="" value="add" >
+    </form>
+
+    <div class="space"></div>
+
+    <form class="box" method="post" action="updateproduct">
+        <div>
+            <select name="nameup" id="updatesel">
+                <option value="0">Selectionner...</option>
+                 {{#each Producto}}
+                            <option>{{this.id}}</option>
+                        {{/each}}
+            </select>
+        </div>
+        <div><input type="text" name="newname" placeholder="new_name" id="updatename" ></div> 
+        <div><input type="text" name="newsource" placeholder="new image"   id="updatesource"></div> 
+        <input type="submit" name="" value="update" >
+    </form>
+    <div class="space"></div>
+    
+    
+    <form  class="box"  method="post" action="delproduct">
+         <div>
+            <select name="namedel" id="dele">
+                <option value="0">Selectionner...</option>
+                 {{#each Producto}}
+                            <option>{{this.id}}</option>
+                        {{/each}}
+            </select>
+        </div>
+         <input type="submit" value="delete"   >
+
+
+    </form>
+        
+    </div>
+   
+    
+    
+    <script src="/server.js"></script>
+    {{!-- <script src="../Images/reserve.js"></script> --}}
+</body >
+</html>
+
+

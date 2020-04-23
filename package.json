@@ -1,0 +1,23 @@
+{
+  "name": "brief-7",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "fs": "0.0.1-security",
+    "hbs": "^4.1.1",
+    "mongodb": "^3.5.5",
+    "nodemon": "^2.0.3",
+    "opn": "^6.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

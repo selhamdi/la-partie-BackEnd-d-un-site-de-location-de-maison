@@ -1,0 +1,179 @@
+
+   $font: 35px;
+    $color:white;
+    $black: black;
+    $text:center;
+    $width:100%;
+    $height:500px;
+
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+    .classDiv
+      {
+          margin-top: 200px;
+          width:50%;
+          margin-left: auto;
+          margin-right:auto;
+        }
+.button
+   {margin-top: 20px;
+
+            }
+input {
+  width: 100%;
+  border: 1px solid gray ; 
+  height: 50px;
+                         
+  &hover {  background-color:#dbbc8f;
+    }  
+  }
+    .dateBirth{
+      margin-top: 20px;
+      }
+       header { 
+
+        height: 81px;
+        background-color:#544F54; 
+      }
+        ul   {
+              padding: 12px;
+        list-style: none;
+        color: $color;
+        text-align:  $text;
+        font-size:  $font /2 + 6;
+      
+
+            li 
+            {
+            display: inline;
+            padding: 30px; 
+              a 
+                {
+                  color: $color;
+                  text-decoration: none;
+                  
+              }
+            }             
+     }
+.nav2 {
+  display: none;
+  color: white;
+  margin-top: 2%;
+  margin-left: 3%;
+  
+
+  }
+.menu
+       { margin-left:2%;
+      margin-top: 3%;
+      }
+.box2 {
+          font-family: sans-serif;
+          text-align: center;
+          margin-left: 9%;
+          margin-top: -2%;
+          border: 2px solid white;
+          padding: 6%;
+          width: 71%;
+          background-color: #504B4E;
+          font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color:     $color;
+                    }
+      }
+
+
+
+h1 { 
+  text-align:     $text;
+  font-family: sans-serif;
+  color: gray;
+ margin-top: 5%;
+ font-size:  $font - 10;
+}
+  .slide {
+    display:flex;
+    width: 90%;
+    height: 770px;
+    margin-left: 5%;
+    margin-top: 3%;
+    }
+
+.slideshow-container {
+  width: 90%;
+  position: relative;
+  top: 150px;
+  margin: auto;
+  margin-top: -8%;
+}
+
+.myslides {
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 64%;
+  margin-left: 7%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px;
+  margin-top: -22px;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.next {
+  top: 64%;
+  right: 7%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade img {
+  width: 100%;
+  height: 500px;
+
+}
+
+
+footer {  
+width: 100%;
+height: 60px;
+margin-top: 10%;
+ background-color:#504B4E;
+   .p { 
+     display:flex;
+     margin-left: 40%;
+     margin-top: -1%;
+     color: gray;
+     font-size:15px;
+
+
+     }
+        .RS {
+color: white
+         }
+
+   }
+
+
+ @media screen and ( max-width: 767px  ) {
+
+header { height:  340px}
+  .nav2 { display: inline;}
+    ul {display: none;}
+    h1 {font-size: 20px; margin-top: 55px;}
+    .slideshow-container {margin-top:-114px;}
+      .RS { margin-left: -33%;}
+    }

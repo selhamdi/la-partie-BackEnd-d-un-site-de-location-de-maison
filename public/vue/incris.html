@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/inscris.css">
+    <link rel="stylesheet" href="../public/css/all.min.css">
+   
+   
+</head>
+<body>
+    <header>
+        <ul>
+            <li> <a href="./home.html">Galerie</a></li>
+            <li> <a href="./Galerie.html"> Réservations</a></li>
+            <li> <a href="./public/vue/incris.html"> Inscris-toi</a> </li>
+        </ul>
+    </div>
+    <div class="nav2">
+        <div class="menu">
+            <img onclick="menu()" src="image/menu.jpg">
+        </div>
+        <div class="container" id="container">
+            <div class="box2"> <a href="/public/vue/home.html">Galerie</a> </div>
+            <div class="box2"> <a href="/public/vue/Galerie.html"> Réservations</a> </div>
+            <div class="box2"> <a href="/public/vue/incris.html"> Inscris-toi</a> </div>
+        </div>
+   </div> 
+   <script>
+       function menu()
+       {
+        var x=document.getElementById("container");
+        if(x.style.display==="none")
+        x.style.display="inline";
+        else
+        x.style.display="none";
+    }
+   </script> 
+
+    </header>
+    <div>
+        <h1>Inscription</h1>
+        <p>Vous avez un déjà un compte ?  <a href=""> Connectez-vous .</a></p> 
+    </div>
+    <form action="">
+        <div>
+            <div class="prenom">
+                <label  for="firstname" >Prénom </label><br>
+                <input   id="firstname" type="text" placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <label for="lastname"> Nom</label><br>
+                <input  id="lastname" type="text" placeholder="Entrer votre nom"> 
+            </div>
+            <div>
+                <label for="email"> Email</label><br>
+                <input  id="email" type="text" placeholder="Entrer votre email">
+            </div>
+            <div>
+                <label for="passwd"> Mot de pass</label><br>
+                <input  id="passwd"  type="password" placeholder="Entrer votre mot de pass">
+            </div>
+            <div>
+                <label for="passwd2"> Confirmation de mot pass</label><br>
+                <input  id="password2" type="password"   placeholder="Confirmation de mot de pass">
+            </div>
+        </div>
+        <div class="button">
+            <input type="button" onclick="verifyinscription()" value="valider">
+        </div>
+      
+        <script>
+            
+        </script>
+    </form>
+    <footer>
+        <div class="RS">
+       <i class="fab fa-facebook" style="margin-top:2%; margin-left: 90%;"></i>
+       <i class="fab fa-linkedin"></i>
+       <i class="fab fa-twitter-square"></i>
+        </div>
+        <div class="p">
+            Privacy      Site Map    Connect with us
+        </div>
+                
+    </footer>
+    <script src="all.min.js"></script>
+
+</body>
+</html>

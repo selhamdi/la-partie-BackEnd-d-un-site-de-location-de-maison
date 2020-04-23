@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Galerie</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/Galerie.css">
+
+</head>
+
+<body>
+  
+<header>
+    <ul>
+        <li> <a href="../vue/home.html">Galerie</a></li>
+        <li> <a href="../vue/Galerie.html"> Réservations</a></li>
+        <li> <a href="../vue/incris.html"> Inscris-toi</a> </li>
+     </ul>
+        
+   <div class="nav2">
+        <div class="menu">
+          <img onclick="menu()" src="../image/menu.jpg">
+        </div>
+        <div class="container" id="container">
+            <div class="box2"> <a href="../vue/home.html">Galerie</a> </div>
+            <div class="box2"> <a href="../vue/Galerie.html"> Réservations</a> </div>
+            <div class="box2"> <a href="../vue/incris.html"> Inscris-toi</a>  </div>
+         </div>
+       </div> 
+
+</header>
+
+
+  <h1>Luxury villa in the Marrakesh region with private pool and 3 master suites</h1>
+<!-- 
+      <div class="slideshow-container">
+        <div class="myslides fade">
+          <div><img src="Image/m1.jpg"></div>
+        </div> 
+        <div class="myslides fade">
+            <div><img src="Image/m12.jpg"></div>
+        </div>
+        <div class="myslides fade">
+            <div><img src="Image/m13.jpg"></div>
+        </div>
+        <div class="myslides fade">
+            <div><img src="Image/m14.jpg"></div>
+        </div> -->
+
+        <div id="slider">
+          <img src="../image/m1.jpg" class="slide" id="slide">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    
+    
+     <div class="classDiv">
+      <div >
+        
+          <label for="lastname"> </label><br>
+          <input  id="lastname" type="text" placeholder=" Entrer votre nom" onkeyup="this.value = this.value.toUpperCase();"> 
+      </div>
+      <div>
+          <label for="email"></label><br><br>
+          <input  id="email" type="text" placeholder=" Entrer votre email" onkeyup="this.value = this.value.toUpperCase();">
+      </div>
+      <div class="dateBirth">
+        <input type="date"  id="JJ" required>
+      
+      </div>
+      <div>
+          <label for="  Nombre de personne"></label><br>
+          <input  id="nbP" type="number"   placeholder=" Nombre de personne">
+      </div>
+      <div>
+        <label for="Période de location"></label><br>
+        <input  id="pdL" type="number"   placeholder=" Période de location">
+    </div>
+    <div class="button">
+      <input type="submit" value="valider" onclick="verifyreservation()">
+  </div>
+
+      
+     </div>
+
+   
+    <script type="text/javascript">
+     
+     var slide = new Array("../image/m1.jpg", "../image/m12.jpg", "../image/m13.jpg", "../image/m14.JPG");
+     var numero = 0;
+
+function plusSlides (sens) {
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slide.length - 1;
+    if (numero > slide.length - 1)
+        numero = 0;
+    document.getElementById("slide").src = slide[numero];
+}
+
+function verifyreservation(){
+   var ln,email,nbP,pdl,date;
+      ln=document.getElementById("lastname").value;
+      email=document.getElementById("email").value;
+      nbP=document.getElementById("nbP").value;
+      pdl=document.getElementById("pdL").value;
+      date = document.getElementById("JJ").value;
+      
+      var regexmail = /^[a-zA-Z0-9._-]+@[a-zA-Z]{2,6}\.[a-zA-Z]{2,4}$/;
+      var regexname = /^[a-zA-Z]{3,16}$/;
+  
+     
+
+      var cpt=0;
+      if(ln=="" || email=="" || nbP=="" ||  pdL=="" || date == "" )
+         {
+             window.alert(" Tous les champs doivent être remplis");
+             cpt++;
+         }
+       
+      if( ln!="" && email!="" && nbP!="" && pdL!="")
+     {
+         if(!regexmail.test(email) || !regexname.test(ln))
+         {
+            
+             window.alert("Respectez les formats des elements entrés");
+             cpt++;
+         }
+     }
+   
+    if(cpt==0)
+    {
+     window.confirm("la reservation est valide. Nom : "+ln+"  email : "+email+"  nombre de personne: "+nbP+" période de location est :"+pdl );
+    }
+
+}
+function menu()
+           {
+            var x=document.getElementById("container");
+            if(x.style.display==="none")
+            x.style.display="inline";
+            else
+            x.style.display="none";
+          }   
+
+    </script>
+<footer>
+      <div class="RS">
+     <i class="fab fa-facebook" style="margin-top:2%; margin-left: 90%;"></i>
+     <i class="fab fa-linkedin"></i>
+     <i class="fab fa-twitter-square"></i>
+      </div>
+      <div class="p">
+          Privacy      Site Map    Connect with us
+      </div>
+              
+</footer>
+  <script src="../css/all.min.js"> </script>
+  <script src=".."></script>
+</body>
+
+</html>
