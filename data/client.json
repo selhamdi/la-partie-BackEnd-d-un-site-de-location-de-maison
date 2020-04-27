@@ -1,39 +1,18 @@
 [
     {      
         "id": "Marrakech",
-         "source": "/public/image/kech.jpg"
+       "source":"/image/kech.jpg"
     },
     {      
          "id": "Tanger",
-         "source": "/public/image/tanger.jpg"
+         "source": "/image/tanger.jpg"
     },
     {      
         "id": "Casablanca",
-        "source": "/public/image/casablanca.jpg"
+        "source": "/image/casablanca.jpg"
     },
     {      
         "id": "Fes",
-        "source": "/public/image/fes.jpg"
-    },
-    {      
-        "id": "marrakecch",
-        "source": ""
-    },
-    {      
-        "id": "marrakecch",
-        "source": ""
-    },
-    {      
-        "id": "marrakecch",
-        "source": "/public/image/kech.jpg"
-    },
-    {      
-        "id": "marrakecch",
-        "source": "/public/image/kech.jpg"
-    },
-    {      
-        "id": "marrakecch",
-        "source": "/public/image/kech.jpg"
+        "source": "/image/fes.jpg"
     }
-
 ] 

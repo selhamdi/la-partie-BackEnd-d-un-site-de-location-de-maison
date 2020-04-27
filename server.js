@@ -3,7 +3,8 @@ const path = require('path');
 const express = require("express");
 const hbs = require("express-handlebars");
 const app = express();
-const port =3000
+const port =3000;
+var opn= require('opn');
 const dataAccess = require('./Routes/Login');
 var bodyParser = require('body-parser');
 
@@ -33,7 +34,7 @@ app.get("/home.hbs", (req, res) => {
 
 //write
 app.post("/ADDproduct",function(req,res){
-  Producto = dataAccess.LoadJson('Data/home.json');
+  Producto = dataAccess.LoadJson('Data/client.json');
   var new_product={id:req.body.addname, source:req.body.addsource} ;
   Producto.push(new_product);
   dataAccess.SaveJson("data/client.json",Producto);
@@ -82,7 +83,7 @@ console.log(temparrray)
 
 
 app.listen(port, () => {console.log(`listening on port ${port}!`);
-// opn("http://localhost:3000/vue/home.hbs");
+opn("http://localhost:3000/home.hbs");
 });
 
 
