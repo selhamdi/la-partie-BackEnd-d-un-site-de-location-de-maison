@@ -8,7 +8,15 @@
    <link rel="stylesheet" href="/css/style.css">
    <link rel="stylesheet" href="/css/all.min.css">
    
-   
+   <style>
+       .main-reserve {
+           display: flex;
+       }
+  .image{
+        width: 100%;
+        height: 300px;
+    }
+   </style>
 </head>
 <body>
     <header>
@@ -62,16 +70,7 @@
                 nous offront une multitude d’offres voyages pour réussir votre séjour au Maroc</p>
         </div>
 
-    <div class="main-reserve">
-  {{#each Producto}}
-        <div class="clonne1" >
-        <div class="zoom">
-        <div > <img src="{{this.source}}"></div>
-        <h4>{{this.id}}</h4>
-        <p>300 locations disponibles</p>
-       </div>
-     </div>
-  {{/each}}
+   
        
         {{!-- {{#each Producto}}
          <div class="solo-column">
@@ -86,9 +85,10 @@
 
     <div class="space"></div> 
     
-    <form class="box" method="POST" action="ADDproduct">
+    <form class="box" method="POST" action="ADDproduct" class="form1">
         <div><input type="text" name="addname" placeholder="id_name" id="addname" ></div> 
         <div><input type="text" name="addsource" placeholder="link image"   id="addsource"></div> 
+        <div><input type="text" name="addp" placeholder="location disponible" id="addp"></div>
         <input type="submit" name="" value="add" >
     </form>
 
@@ -100,11 +100,12 @@
                 <option value="0">Selectionner...</option>
                  {{#each Producto}}
                             <option>{{this.id}}</option>
-                        {{/each}}
+                 {{/each}}
             </select>
         </div>
         <div><input type="text" name="newname" placeholder="new_name" id="updatename" ></div> 
         <div><input type="text" name="newsource" placeholder="new image"   id="updatesource"></div> 
+        <div><input type="text" name="newp" placeholder="location disponible" id="updatep"></div>
         <input type="submit" name="" value="update" >
     </form>
     <div class="space"></div>
@@ -123,7 +124,16 @@
 
 
     </form>
-        
+         <div class="main-reserve">
+  {{#each Producto}}
+        <div class="clonne1">
+        <div class="zoom">
+        <div  class="image"> <img src="{{this.source}}"></div>
+        <h4>{{this.id}}</h4>
+        <p>{{this.p}}</p>
+       </div>
+     </div>
+  {{/each}}
     </div>
     <footer>
     <div class="RS">

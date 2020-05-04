@@ -1,18 +1,1 @@
-[
-    {      
-        "id": "Marrakech",
-       "source":"/image/kech.jpg"
-    },
-    {      
-         "id": "Tanger",
-         "source": "/image/tanger.jpg"
-    },
-    {      
-        "id": "Casablanca",
-        "source": "/image/casablanca.jpg"
-    },
-    {      
-        "id": "Fes",
-        "source": "/image/fes.jpg"
-    }
-] 
+[{"id":"Tanger","source":"/image/tanger.jpg","p":"200 locations disponibles"},{"id":"Casablanca","source":"/image/casablanca.jpg","p":"150 locations disponibles"},{"id":"Fes","source":"/image/fes.jpg","p":"50 locations disponibles"},{"id":"Essaouira","source":"/image/essaouira.jpg","p":"100 locations disponibles"},{"id":"Ouarzazate","source":"/image/ouarzazate.jpg","p":"89 locations disponibles"},{"id":"Saidia","source":"/image/saidia.jpg","p":"50 locations disponibles"},{"id":"Zagora","source":"/image/zagora.jpg","p":"20 locations disponibles"}]

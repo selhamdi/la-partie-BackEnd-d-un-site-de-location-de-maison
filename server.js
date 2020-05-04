@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use("/css",express.static("./css"))
-app.use("/image",express.static("./image"))
+app.use("/image",express.static("./data/image"))
 // app.use("/Images",express.static("./Images"))
 
  
@@ -35,7 +35,7 @@ app.get("/home.hbs", (req, res) => {
 //write
 app.post("/ADDproduct",function(req,res){
   Producto = dataAccess.LoadJson('Data/client.json');
-  var new_product={id:req.body.addname, source:req.body.addsource} ;
+  var new_product={id:req.body.addname, source:req.body.addsource, p:req.body.addp} ;
   Producto.push(new_product);
   dataAccess.SaveJson("data/client.json",Producto);
   
@@ -46,11 +46,12 @@ app.post("/ADDproduct",function(req,res){
 
 app.post("/updateproduct",function(req,res){
   Producto = dataAccess.LoadJson('Data/client.json'); 
-  var new_product={id:req.body.newname, source:req.body.newsource} ;
+  var new_product={id:req.body.newname, source:req.body.newsource , p:req.body.newp} ;
   Producto.forEach(function(item){
     if(item.id == req.body.nameup){
       item.id = new_product.id;
       item.source = new_product.source;
+      item.p =new_product.p;
     }
   });
 
@@ -77,7 +78,7 @@ console.log(temparrray)
     Producto = dataAccess.LoadJson('Data/client.json');
  
 
-  res.render('reserve.hbs',{Producto});
+  res.render('home.hbs',{Producto});
 });
 
 
